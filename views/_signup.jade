@@ -1,0 +1,23 @@
+form#sign-up-form(action='#', method='post', novalidate)
+  .control-group
+    label.control-label(for='sign-up-email') Email
+    .controls
+      .input-prepend
+        .span.add-on
+          i.icon-envelope
+        input#sign-up-email(name='email', type='email')
+  .control-group
+    label.control-label(for='sign-up-password') Password
+    .controls
+      .input-prepend
+        .span.add-on
+          i.icon-key
+        input#sign-up-password(name='password', type='password')
+  .control-group
+    label.control-label(for='sign-up-confirm-password') Confirm password
+    .controls
+      .input-prepend
+        .span.add-on
+          i.icon-key
+        input#sign-up-confirm-password(name='confirmPassword', type='password')
+  button.btn.btn-primary(type='submit') Sign up

@@ -1,0 +1,31 @@
+header#header.navbar
+  .navbar-inner
+    a.brand(href='/')= title
+    nav#navigation
+      ul.nav
+        li.divider-vertical
+        li
+          a(href='#!/documents/new', data-command='newDocument')
+            i.icon-file 
+            | New
+        li.divider-vertical
+        li
+          a(href='#!/documents', data-command='openDocuments')
+            i.icon-folder-open-alt 
+            | Open
+        li.divider-vertical
+        li
+          a(href='javascript:;', data-command='saveDocument')
+            i.icon-ok 
+            | Save
+        li.divider-vertical
+        li
+          a(href='javascript:;', data-command='exportDocument')
+            i.icon-picture 
+            | Export
+      ul.nav.pull-right
+        li.divider-vertical
+        li
+          a(href='javascript:;', data-command='myAccount')
+            i.icon-user 
+            | My Account

@@ -1,0 +1,17 @@
+#document-title-dialog.modal.hide.fade
+  .modal-header
+    button.close(type='button', data-dismiss='modal', aria-hidden='true',
+    title='close') &times;
+    h3 New document
+  .modal-body
+    .form-horizontal
+      .control-group
+        label.control-label(for='document-title-input') Title
+        .controls
+          .input-prepend
+            span.add-on
+              i.icon-file
+            input#document-title-input(type='text', name='title')
+  .modal-footer
+    button.btn.btn-primary(type='button') Save
+    a.btn(href='javascript:;', data-dismiss='modal') Cancel

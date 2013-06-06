@@ -1,0 +1,20 @@
+form#sign-in-form(action='#', method='post', novalidate)
+  .control-group
+    label.control-label(for='sign-in-email') Email
+    .controls
+      .input-prepend
+        .span.add-on
+          i.icon-envelope
+        input#sign-in-email(name='email', type='email')
+  .control-group
+    label.control-label(for='sign-in-password') Password
+    .controls
+      .input-prepend
+        .span.add-on
+          i.icon-key
+        input#sign-in-password(name='password', type='password')
+  .control-group
+    label.checkbox
+      input#sign-in-remember(name='rememberMe', type='checkbox', value='true')
+      span Keep me remembered
+  button.btn.btn-primary(type='submit') Sign in

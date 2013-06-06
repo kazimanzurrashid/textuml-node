@@ -1,0 +1,44 @@
+{
+  "name": "text-uml",
+  "version": "0.0.1",
+  "description": "Text based uml drawing application.",
+  "author": {
+    "name": "Kazi Manzur Rashid",
+    "email": "kazimanzurrashid@gmail.com"
+  },
+  "private": true,
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "mocha"
+  },
+  "dependencies": {
+    "async": "~0.2.9",
+    "bower": "~0.8.6",
+    "coffee-script": "~1.6.3",
+    "connect": "~2.7.11",
+    "cookie": "0.0.6",
+    "express": "~3.1.2",
+    "jade": "~0.28.2",
+    "less-middleware": "~0.1.11",
+    "mongojs": "~0.7.5",
+    "socket.io": "~0.9.14",
+    "underscore": "~1.4.4"
+  },
+  "devDependencies": {
+    "chai": "~1.5.0",
+    "grunt-cli": "~0.1.7",
+    "grunt-contrib-coffee": "~0.6.6",
+    "grunt-contrib-watch": "~0.3.1",
+    "mocha": "~1.9.0",
+    "nodemon": "~0.7.6",
+    "node-inspector": "~0.2.0beta4",
+    "requirejs": "~2.1.5",
+    "sinon": "~1.6.0",
+    "superagent": "~0.14.1"
+  },
+  "readmeFilename": "readme.md",
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  }
+}

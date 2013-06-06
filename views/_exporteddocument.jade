@@ -1,0 +1,13 @@
+#exported-document-dialog.modal.hide.fade
+  .modal-header
+    button.close(type='button', data-dismiss='modal', aria-hidden='true',
+    title='close') &times;
+    h3 Exported image
+  .modal-body
+    .alert.alert-info.hide
+      i.icon-info-sign
+      |  Your <abbr title='Portable Network Graphics'>png</abbr> file is 
+      | successfully generated, right click the following image and select
+      | <em>Save Image as...</em>
+    .image-container 
+      img.img-polaroid(src='/images/spacer.gif', alt='Exported Image')

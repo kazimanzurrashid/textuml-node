@@ -1,0 +1,49 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+.idea/
+
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+TAGS
+!TAGS/
+tags
+!tags/
+
+b-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+logs
+results
+
+npm-debug.log
+node_modules
+
+public/vendor
+
+# public/javascripts/application/lib/*.js
+# public/javascripts/application/models/*.js
+# public/javascripts/application/uml/drawing/canvas/*.js
+# public/javascripts/application/uml/drawing/sequence/*.js
+# public/javascripts/application/uml/drawing/*.js
+# public/javascripts/application/uml/language/sequence/*.js
+# public/javascripts/application/uml/language/*.js
+# public/javascripts/application/uml/models/sequence/*.js
+# public/javascripts/application/uml/models/*.js
+# public/javascripts/application/views/*.js
+# public/javascripts/application/*.js
+# public/javascripts/*.js

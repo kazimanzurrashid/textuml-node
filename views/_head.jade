@@ -1,0 +1,19 @@
+meta(charset='utf-8')
+meta(name='description', 
+content='Text based uml drawing application.')
+meta(name='viewport', content='width=device-width')
+link(rel='stylesheet', href='/stylesheets/style.css')
+//if IE
+  meta(content='IE=Edge', http-equiv='X-UA-Compatible')
+  meta(content='on', http-equiv='cleartype')
+//if lt IE 9
+  script(src='/vendor/html5shiv/dist/html5shiv.js')
+script(src='/vendor/requirejs/require.js')
+script
+  define('preloaded-data', function(){
+    return {
+      userSignedIn: !{userSignedIn},
+      documents: !{JSON.stringify(documents)}
+    };
+  });
+  require(['/javascripts/main.js']);

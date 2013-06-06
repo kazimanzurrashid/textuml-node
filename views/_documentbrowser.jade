@@ -1,0 +1,34 @@
+#document-browser-dialog.modal.hide.fade
+  .modal-header
+    button.close(type='button', data-dismiss='modal', aria-hidden='true',
+    title='close') &times;
+    h3 Open document
+  .modal-body
+    #document-list
+      .btn-toolbar
+        span Sort:
+        .btn-group(data-toggle='buttons-radio')
+          button.btn.btn-mini(type='button',
+          data-sort-attribute='title') Title
+          button.btn.btn-mini.active(type='button',
+          data-sort-attribute='updatedAt') Last updated
+        .btn-group(data-toggle='buttons-radio')
+          button.btn.btn-mini(type='button', data-sort-order='0')
+            i.icon-sort-up
+          button.btn.btn-mini.active(type='button', data-sort-order='1')
+            i.icon-sort-down
+      .list-container(tabindex='-1')
+        ul.unstyled
+      script#document-item-template(type='text/html')
+        .display
+          span(title="Double click to edit")
+            {{title}}
+          small(title="{{lastUpdatedInHumanizeTime()}}")
+            | last updated {{lastUpdatedInRelativeTime()}}            
+        .edit
+          input(type='text', value="{{title}}",
+          title="Type your title and hit enter")
+        i.icon-trash(title='Delete', data-command='delete')
+  .modal-footer
+    button.btn.btn-primary(type='button') Open
+    a.btn(href='javascript:;', data-dismiss='modal') Cancel

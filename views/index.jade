@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  include _header
+  #content
+    #side-bar.splitter-pane
+      include _example
+    #main.splitter-pane(role='main')
+      .splitter-pane
+        include _editor
+      .splitter-pane
+        include _canvas
+  include _documenttitle
+  include _documentbrowser
+  include _exporteddocument
+  include _membership
+  include _profile

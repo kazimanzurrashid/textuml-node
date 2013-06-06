@@ -1,0 +1,21 @@
+#membership-dialog.modal.hide.fade
+  .modal-header
+    button.close(type='button', data-dismiss='modal', aria-hidden='true',
+    title='close') &times;
+    h3 My account
+  .modal-body
+    .tabbable
+      ul.nav.nav-tabs
+        li.active
+          a(href='#sign-in-pane', data-toggle='tab') Sign in
+        li
+          a(href='#sign-up-pane', data-toggle='tab') Sign up
+      .tab-content
+        #sign-in-pane.tab-pane.active
+          .modal-section
+            include _signin
+          .modal-section
+            include _forgotpassword
+        #sign-up-pane.tab-pane
+          .modal-section
+            include _signup
