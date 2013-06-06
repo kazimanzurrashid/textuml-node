@@ -1,3 +1,3 @@
-Classy Diagram
+Text UML
 ===============
-Text based uml drawing application.
+Text based uml drawing application written in coffeescript.
