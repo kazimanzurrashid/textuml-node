@@ -6,9 +6,9 @@ define (require) ->
   LabelMargin = 8
 
   textAttributes =
-    fontFamily: Config.fontFamily
-    fontSize: Config.fontSize
-    fill: Config.foreColor
+    fontFamily    : Config.fontFamily
+    fontSize      : Config.fontSize
+    fill          : Config.foreColor
 
   class GroupHeader extends Composite
     constructor: (@x, @y, @showType, @model) -> super

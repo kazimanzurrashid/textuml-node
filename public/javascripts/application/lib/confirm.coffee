@@ -39,4 +39,4 @@ define (require) ->
         options.ok?()
 
     dialog.on('hidden', -> dialog.remove()).modal 'show'
-  $  
+  $

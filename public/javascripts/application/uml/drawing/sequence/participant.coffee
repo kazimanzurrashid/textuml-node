@@ -5,9 +5,9 @@ define (require) ->
   Margin = 30
 
   textAttributes =
-    fontFamily: Config.fontFamily
-    fontSize: Config.fontSize
-    fill: Config.foreColor
+    fontFamily    : Config.fontFamily
+    fontSize      : Config.fontSize
+    fill          : Config.foreColor
 
   class Participant extends Composite
     constructor: (@model) -> super

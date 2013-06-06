@@ -1,3 +1,3 @@
 define ->
-  ascending: 0
-  descending: 1
+  ascending     : 0
+  descending    : 1
