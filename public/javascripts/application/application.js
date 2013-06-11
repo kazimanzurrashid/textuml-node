@@ -1,8 +1,7 @@
 var __slice = [].slice;
 
 define(function(require) {
-  var $, Backbone, CanvasView, Context, DocumentBrowserView, DocumentTitleView, EditorView, ExampleListView, ExportedDocumentView, MembershipView, NavigationView, ProfileView, Router, app, attachEventHandlers, clientUrl, clientUrlPrefix, context, createViews, events, hasClientUrl, layout, router, showInfobar, _;
-  $ = require('jquery');
+  var Backbone, CanvasView, Context, DocumentBrowserView, DocumentTitleView, EditorView, ExampleListView, ExportedDocumentView, MembershipView, NavigationView, ProfileView, Router, app, attachEventHandlers, clientUrl, clientUrlPrefix, context, createViews, events, hasClientUrl, layout, router, _;
   _ = require('underscore');
   Backbone = require('backbone');
   NavigationView = require('./views/navigation');
@@ -40,11 +39,6 @@ define(function(require) {
     }
     return true;
   };
-  showInfobar = function(message) {
-    return _(function() {
-      return $.showInfobar(message);
-    }).delay(1000 * 0.7);
-  };
   context = null;
   router = null;
   attachEventHandlers = function() {
@@ -59,10 +53,15 @@ define(function(require) {
         return showInfobar('Your document is successfully saved.');
       });
     });
+    events.on('shareDocument', function() {
+      if (context.isCurrentDocumentNew()) {
+        return $.showErrorbar('You must save this document prior sharing ' + 'with your peers.');
+      }
+    });
     events.on('newDocumentTitleAssigned', function() {
       return context.saveCurrentDocument(function() {
         var url;
-        showInfobar('Your document is successfully saved.');
+        $.showInfobar('Your document is successfully saved.');
         url = clientUrl('documents', context.getCurrentDocumentId());
         return router.navigate(url);
       });
@@ -77,21 +76,21 @@ define(function(require) {
     });
     events.on('signedIn', function() {
       context.userSignedIn();
-      return showInfobar('You are now signed in.');
+      return $.showInfobar('You are now signed in.');
     });
     events.on('passwordResetTokenRequested', function() {
-      return showInfobar('An email with a password reset link has been sent to ' + 'your email address. Please open the link to reset your password.');
+      return $.showInfobar('An email with a password reset link has been sent to ' + 'your email address. Please open the link to reset your password.');
     });
     events.on('passwordChanged', function() {
-      return showInfobar('You have changed your password successfully.');
+      return $.showInfobar('You have changed your password successfully.');
     });
     events.on('signedUp', function() {
-      return showInfobar('Thank you for signing up, an email with a confirmation ' + 'link has been sent to your email address. Please open the link ' + 'to activate your account.');
+      return $.showInfobar('Thank you for signing up, an email with a confirmation ' + 'link has been sent to your email address. Please open the link ' + 'to activate your account.');
     });
     return events.on('signedOut', function() {
       context.userSignedOut();
       router.navigate(clientUrl('documents', 'new'), true);
-      return showInfobar('You are now signed out.');
+      return $.showInfobar('You are now signed out.');
     });
   };
   createViews = function() {
