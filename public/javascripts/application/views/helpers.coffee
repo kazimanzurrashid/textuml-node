@@ -13,21 +13,12 @@ define (require) ->
   hasModelErrors: (jqxhr) -> jqxhr.status is 400
   
   getModelErrors: (jqxhr) ->
+    response = null
     try
       response = $.parseJSON jqxhr.responseText
     catch e
       response = null
-
-    if response
-      modelStateProperty = _(response)
-        .chain()
-        .keys()
-        .filter((key) -> key.toLowerCase() is 'modelstate')
-        .first()
-        .value()
-
-      return response[modelStateProperty] if modelStateProperty
-    undefined
+    response
 
   subscribeModelInvalidEvent: (model, element) ->
     model.once 'invalid', ->
