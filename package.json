@@ -19,9 +19,9 @@
     "cookie": "0.0.6",
     "express": "~3.1.2",
     "jade": "~0.28.2",
-    "less-middleware": "~0.1.11",
+    "less-middleware": "~0.1.12",
     "mongojs": "~0.7.5",
-    "socket.io": "~0.9.14",
+    "socket.io": "~0.9.16",
     "underscore": "~1.4.4"
   },
   "devDependencies": {
