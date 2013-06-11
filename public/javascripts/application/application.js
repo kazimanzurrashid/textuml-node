@@ -1,8 +1,8 @@
 var __slice = [].slice;
 
 define(function(require) {
-  var Backbone, CanvasView, Context, DocumentBrowserView, DocumentTitleView, EditorView, ExampleListView, ExportedDocumentView, MembershipView, NavigationView, ProfileView, Router, app, attachEventHandlers, clientUrl, clientUrlPrefix, context, createViews, events, hasClientUrl, layout, router, _;
-  _ = require('underscore');
+  var $, Backbone, CanvasView, Context, DocumentBrowserView, DocumentTitleView, EditorView, ExampleListView, ExportedDocumentView, MembershipView, NavigationView, ProfileView, Router, app, attachEventHandlers, clientUrl, clientUrlPrefix, context, createViews, events, hasClientUrl, layout, router;
+  $ = require('jquery');
   Backbone = require('backbone');
   NavigationView = require('./views/navigation');
   ExampleListView = require('./views/examplelist');

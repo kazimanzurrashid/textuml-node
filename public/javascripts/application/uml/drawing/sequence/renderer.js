@@ -97,7 +97,7 @@ define(function(require) {
     Renderer.prototype.serialize = function() {
       var url, _ref;
       if (!((_ref = this.surface) != null ? _ref.getChildren().length : void 0)) {
-        throw new Error('You cannot export a blank diagram, add some ' + 'shapes prior exporting.');
+        throw new Error('You cannot export a blank document, add some ' + 'shapes prior exporting.');
       }
       url = this.surface.getChildren()[0].toDataURL();
       return url;
