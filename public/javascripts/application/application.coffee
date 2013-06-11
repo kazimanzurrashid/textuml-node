@@ -1,5 +1,5 @@
 define (require) ->
-  _                         = require 'underscore'
+  $                         = require 'jquery'
   Backbone                  = require 'backbone'
   NavigationView            = require './views/navigation'
   ExampleListView           = require './views/examplelist'
