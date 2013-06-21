@@ -24,7 +24,7 @@ define (require) ->
     cancel: ->
 
   $.confirm = (options) ->
-    options = $.extend defaults, options
+    options = $.extend {}, defaults, options
     data =
       title: options.title
       prompt: options.prompt

@@ -44,7 +44,7 @@ define(function(require) {
   $.fn.showFieldErrors = function(options) {
     var cssClass, errors, firstInput,
       _this = this;
-    options = $.extend({
+    options = $.extend({}, {
       inline: false,
       errors: {}
     }, options);
@@ -105,7 +105,7 @@ define(function(require) {
     template = _("<div class=\"alert alert-error fade in\">\n  <button type=\"button\" class=\"close\" data-dismiss=\"alert\" title=\"close\">&times;</button>\n  <i class=\"icon-warning-sign\"></i> \n  <span>{{message}}</span>\n</div>").template();
     return $.fn.showSummaryError = function(options) {
       var _this = this;
-      options = $.extend({
+      options = $.extend({}, {
         message: 'An unexpected error has occurred while performing your last operation.'
       }, options);
       this.each(function() {

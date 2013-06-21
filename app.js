@@ -12,8 +12,8 @@ app.locals({
 });
 
 var session = express.session({
-  secret: '$ecre8',
-  key: 'express.sid'
+  secret: '$ecre8'
+, key: 'express.sid'
 });
 
 app.configure(function(){
@@ -29,7 +29,7 @@ app.configure(function(){
   app.use(app.router);
   app.use(require('less-middleware')({
     src: __dirname + '/public'
-    , compress: true
+  , compress: true
   }));  
   app.use(express.static(path.join(__dirname, 'public')));
 });

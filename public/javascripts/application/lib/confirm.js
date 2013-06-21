@@ -12,7 +12,7 @@ define(function(require) {
   };
   $.confirm = function(options) {
     var data, dialog;
-    options = $.extend(defaults, options);
+    options = $.extend({}, defaults, options);
     data = {
       title: options.title,
       prompt: options.prompt

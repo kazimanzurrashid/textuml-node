@@ -35,7 +35,7 @@ define (require) ->
         .slideUp animationDuration, -> $(@).remove()
 
   $.fn.showFieldErrors = (options) ->
-    options = $.extend inline: false, errors: {}, options
+    options = $.extend {}, inline: false, errors: {}, options
     cssClass = if options.inline then 'help-inline' else 'help-block'
     errors = options.errors || {}
     firstInput = null
@@ -85,7 +85,7 @@ define (require) ->
     """).template()
 
     $.fn.showSummaryError = (options) ->
-      options = $.extend message: 'An unexpected error has occurred while performing your last operation.', options
+      options = $.extend {}, message: 'An unexpected error has occurred while performing your last operation.', options
 
       @each ->
         container = $ @
