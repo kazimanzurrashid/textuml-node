@@ -16,7 +16,7 @@
     "bower": "~0.8.6",
     "coffee-script": "~1.6.3",
     "connect": "~2.7.11",
-    "cookie": "0.0.6",
+    "cookie": "0.7.0",
     "express": "~3.1.2",
     "jade": "~0.28.2",
     "less-middleware": "~0.1.12",
